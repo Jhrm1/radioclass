@@ -24,6 +24,7 @@ shinyApp(ui, server)
 ```
 
 
+
 For quizzes, extend with `exams` + `exams2forms` for auto-graded questions embeddable in static sites.[6]
 
 ## Deployment Options
