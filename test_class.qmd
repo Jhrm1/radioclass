@@ -1,17 +1,21 @@
 ---
-title: "HW 6: Hypothesis Tests"
-author: "Jael Rojas"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    code_folding: show
-    number_sections: false
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
+project:
+  type: website
+  
+website:
+  title: "Radioclass"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+  sidebar:
+    - index.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
 ---
 
 ```{r}
