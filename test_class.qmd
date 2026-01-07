@@ -1,23 +1,22 @@
+```yaml
 ---
-title: "Radioclass"
+title: "Radioclass Quiz"
 format: html
-engine: knitr
 ---
 
 ```{r}
-#| echo: false
-# Install if needed: install.packages("webexercises")
 library(webexercises)
 ```
 
 
 ```{r}
-fancy_mc(
-  "What is spectral analysis?",
-  c("A" = "Correct answer", "B" = "Wrong", "C" = "Wrong"),
-  correct = "A"
-)
+opts <- c("A" = "Power spectrum estimation", 
+          "answer" = "Correct definition",  # Must have "answer" name
+          "B" = "Image processing only",
+          "C" = "Static analysis")
+cat("What is spectral analysis?", mcq(opts))
 ```
+
 
 
 
