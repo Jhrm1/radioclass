@@ -1,38 +1,23 @@
 ---
-project:
-  type: website
-  
-website:
-  title: "Radioclass"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-  sidebar:
-    - index.qmd
-
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+title: "Radioclass"
+format: html
+engine: knitr
 ---
 
 ```{r}
-#| context: setup
 #| echo: false
-library(shiny)
-ui <- fluidPage(selectInput("quiz", "Question:", choices = c("A", "B")))
-server <- function(input, output) {}
-shinyApp(ui, server)
+# Install if needed: install.packages("webexercises")
+library(webexercises)
+```
+
+
+```{r}
+fancy_mc(
+  "What is spectral analysis?",
+  c("A" = "Correct answer", "B" = "Wrong", "C" = "Wrong"),
+  correct = "A"
+)
 ```
 
 
 
-For quizzes, extend with `exams` + `exams2forms` for auto-graded questions embeddable in static sites.[6]
-
-## Deployment Options
-Deploy Quarto interactives easily, unlike building a full Streamlit clone:
-- **Static (Widgets/JS/webexercises)**: GitHub Pages, Quarto Pub, Netlify—free, no server needed.[4]
-- **Shiny-based**: shinyapps.io (easiest), Hugging Face Spaces, Posit Connect; run `quarto render` then deploy app files.[7][4]
-Start with: `quarto publish gh-pages` for GitHub-hosted quizzes/classes.[8][4]
